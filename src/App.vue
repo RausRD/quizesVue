@@ -2,10 +2,16 @@
 	<div class="container">
 		<header>
 			<h1>Quizes</h1>
-			<input type="text">
+			<input type="text" placeholder="Search...">
 		</header>
 		<div class="options-container">
-
+			<div class="card">
+				<img src="https://i.ytimg.com/vi/Kp2bYWRQylk/maxresdefault.jpg" alt="">
+				<div class="card-text">
+					<h2>Math</h2>
+					<p>15 questions</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -31,4 +37,5 @@
 		padding: 10px;
 		border-radius: 5px;
 	}
+//	CARD
 </style>
