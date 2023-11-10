@@ -1,36 +1,22 @@
+<script setup>
+import {defineProps} from "vue"
+const {question} = defineProps(['question'])
+</script>
+
 <template>
 	<div class="question-container">
-		<h1 class="question">vs sdvsd dssdvv dskjdsvnv</h1>
+		<h1 class="question">{{question.text}}</h1>
 	</div>
 	<div class="options-container">
-		<div class="option">
-			<p class="option-label">A</p>
+		<div v-for="option in question.options" :key="option.id" class="option">
+			<p class="option-label">{{option.label}}</p>
 			<div class="option-value">
-				<p>NaCL</p>
-			</div>
-		</div>
-		<div class="option">
-			<p class="option-label">A</p>
-			<div class="option-value">
-				<p>NaCL</p>
-			</div>
-		</div>
-		<div class="option">
-			<p class="option-label">A</p>
-			<div class="option-value">
-				<p>NaCL</p>
-			</div>
-		</div>
-		<div class="option">
-			<p class="option-label">A</p>
-			<div class="option-value">
-				<p>NaCL</p>
+				<p>{{option.text}}</p>
 			</div>
 		</div>
 	</div>
 </template>
-<script setup>
-</script>
+
 
 <style scoped>
 .options-container {
